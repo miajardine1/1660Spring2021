@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Sledge Hammer.ma
-//Last modified: Thu, Jan 21, 2021 10:48:03 AM
+//Last modified: Thu, Jan 21, 2021 12:59:03 PM
 //Codeset: 1252
 requires maya "2020";
 currentUnit -l centimeter -a degree -t film;
@@ -9,12 +9,12 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
-fileInfo "UUID" "2EECE6D1-4366-45AC-9259-73A1D6DAE4C1";
+fileInfo "UUID" "578CDF00-4367-28D3-C609-53A9FAF4CD72";
 createNode transform -s -n "persp";
 	rename -uid "BD857459-429A-9416-6D1D-06B42741AE50";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.68029883059797136 2.5342813526848733 17.708679120265501 ;
-	setAttr ".r" -type "double3" -8.1383527162879883 3957.7999999992467 4.9732824146424341e-17 ;
+	setAttr ".t" -type "double3" 17.105520477565385 3.6420378846638668 3.8235368307722801 ;
+	setAttr ".r" -type "double3" -11.73835271628811 4037.3999999990533 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "4C8C9B96-4781-305F-F21A-058051C9A4C9";
 	setAttr -k off ".v" no;
