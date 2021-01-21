@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Sledge Hammer.ma
-//Last modified: Thu, Jan 21, 2021 10:46:46 AM
+//Last modified: Thu, Jan 21, 2021 10:48:03 AM
 //Codeset: 1252
 requires maya "2020";
 currentUnit -l centimeter -a degree -t film;
@@ -9,12 +9,12 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
-fileInfo "UUID" "4B02847E-45D8-4D5F-46DD-EEBF28417830";
+fileInfo "UUID" "2EECE6D1-4366-45AC-9259-73A1D6DAE4C1";
 createNode transform -s -n "persp";
 	rename -uid "BD857459-429A-9416-6D1D-06B42741AE50";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.55819836437233805 2.1625893906166556 17.762159957943325 ;
-	setAttr ".r" -type "double3" -6.9383527156279268 4318.1999999999043 -3.7290525796813402e-17 ;
+	setAttr ".t" -type "double3" -0.68029883059797136 2.5342813526848733 17.708679120265501 ;
+	setAttr ".r" -type "double3" -8.1383527162879883 3957.7999999992467 4.9732824146424341e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "4C8C9B96-4781-305F-F21A-058051C9A4C9";
 	setAttr -k off ".v" no;
@@ -116,9 +116,9 @@ createNode mesh -n "pCylinderShape3" -p "pCylinder3";
 	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "pCylinder4";
 	rename -uid "819711B8-49B6-B9E8-D2E4-5C9456997993";
-	setAttr ".t" -type "double3" 0.094495669899999024 2.806309999998331 -1.3293944700000002 ;
+	setAttr ".t" -type "double3" 0.11279048989999903 2.7696639999982624 -1.3234471200000002 ;
 	setAttr ".r" -type "double3" 90.783217105218071 3.1060104311167156e-18 -0.032324047744751415 ;
-	setAttr ".s" -type "double3" 1.0032906278697886 0.15090449672497175 0.87066548781181574 ;
+	setAttr ".s" -type "double3" 0.93771538485327954 0.15090449672497175 0.87066548781181574 ;
 createNode mesh -n "pCylinderShape4" -p "pCylinder4";
 	rename -uid "E4256370-4605-4BF4-EF77-3DBCDE37E7A8";
 	setAttr -k off ".v";
