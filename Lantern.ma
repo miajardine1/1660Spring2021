@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Lantern.ma
-//Last modified: Mon, Feb 22, 2021 11:55:36 PM
+//Last modified: Tue, Feb 23, 2021 01:48:06 PM
 //Codeset: 1252
 requires maya "2020";
 currentUnit -l centimeter -a degree -t film;
@@ -9,19 +9,19 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
-fileInfo "UUID" "70097533-4F98-09CB-D670-969AF4A89CE3";
+fileInfo "UUID" "7DCC8594-4611-3498-0CCD-BBB7B53BB439";
 createNode transform -s -n "persp";
 	rename -uid "A13F20A2-4BF8-4C1A-B563-1DA5A403D5B7";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -113.81244592997226 6.0867610511626564 90.206633085936062 ;
-	setAttr ".r" -type "double3" -2.3999999999999955 1748.3999999997448 0 ;
+	setAttr ".t" -type "double3" 65.659388117609083 -4.7517211085728555 -62.526590282647476 ;
+	setAttr ".r" -type "double3" 2.9999999999998899 1933.5999999991934 0 ;
 	setAttr ".rp" -type "double3" 7.1054273576010019e-15 1.7763568394002505e-15 -1.4210854715202004e-14 ;
 	setAttr ".rpt" -type "double3" -3.7429567314558911e-15 -1.8031153472562124e-14 1.3495070599031424e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DAAC591C-4557-53C2-F5E3-B39E7FEADF7B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 145.35321861343786;
+	setAttr ".coi" 90.792668172563069;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
