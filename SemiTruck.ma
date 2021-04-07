@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: SemiTruck.ma
-//Last modified: Mon, Apr 05, 2021 11:04:25 PM
+//Last modified: Tue, Apr 06, 2021 09:38:10 PM
 //Codeset: 1252
 requires maya "2020";
 currentUnit -l centimeter -a degree -t film;
@@ -9,17 +9,17 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
-fileInfo "UUID" "881B0008-4A08-0894-5463-69836B2EE78F";
+fileInfo "UUID" "EBF3AB67-4FD5-4091-D558-29B32025FBAD";
 createNode transform -s -n "persp";
 	rename -uid "1CBE3741-478E-0F60-11F1-8990FA78506A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 28.443392954192056 -1.9200541778420837 0.29786940296187936 ;
-	setAttr ".r" -type "double3" 363.86164726519678 -270.60000000001054 3.7965768847274616e-14 ;
+	setAttr ".t" -type "double3" 15.70080852098722 -0.63433745139294739 -7.9999615190160194 ;
+	setAttr ".r" -type "double3" 362.06164726595392 116.99999999995767 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "0B95295A-4592-8852-E6CD-D28358374B84";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 28.509681460422005;
+	setAttr ".coi" 17.632843120759546;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -73,8 +73,8 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 createNode transform -n "pCube1";
 	rename -uid "1686A376-4758-9F70-8B84-1A8D67966EF7";
-	setAttr ".t" -type "double3" -2.8512867401980206 1.7000636460812908 3.7449967891768177 ;
-	setAttr ".s" -type "double3" 4.0672081945017293 3.2991688879431083 15.139938282406764 ;
+	setAttr ".t" -type "double3" -2.8512867401980206 1.7406504692801565 2.8854839471607878 ;
+	setAttr ".s" -type "double3" 4.0672081945017293 3.2256807320663032 12.41909823836323 ;
 createNode mesh -n "pCubeShape1" -p "pCube1";
 	rename -uid "D4455554-4381-760C-E14C-8EABB064AC1E";
 	setAttr -k off ".v";
@@ -86,6 +86,11 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 6 ".pt";
+	setAttr ".pt[16]" -type "float3" 0 -0.10107781 0 ;
+	setAttr ".pt[17]" -type "float3" 0 -0.10107781 0 ;
+	setAttr ".pt[18]" -type "float3" 0 -0.10107781 0 ;
+	setAttr ".pt[19]" -type "float3" 0 -0.10107781 0 ;
 createNode transform -n "pCube2";
 	rename -uid "AA9C2554-4017-2144-0DFF-838DA10B1F52";
 	setAttr ".t" -type "double3" -2.8462187241488754 1.4871954882892076 -6.5461077249444308 ;
@@ -95,26 +100,26 @@ createNode mesh -n "pCubeShape2" -p "pCube2";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.375 ;
+	setAttr ".pv" -type "double2" 0.5 0.25 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr -s 24 ".pt[0:23]" -type "float3"  2.1827873e-11 -0.057032079 
-		-0.072491743 0 -0.056509964 -0.17892537 -2.9802322e-08 -0.14383681 -0.17892534 -3.1664968e-08 
-		-0.14383681 -0.17892531 1.44355e-08 -0.14383681 -0.14345619 1.5832484e-08 -0.14383681 
+		-0.072491743 0 -0.056509964 -0.17892537 -2.9802322e-08 -0.32622772 -0.17892534 -3.1664968e-08 
+		-0.32622772 -0.17892531 1.44355e-08 -0.32598442 -0.14345619 1.5832484e-08 -0.32598442 
 		-0.14345619 1.8626451e-09 -0.056959614 -0.04883229 2.2118911e-09 -0.056343749 -0.14104956 
 		1.1175871e-08 -0.057169676 -0.07537704 1.1175871e-08 -0.058679413 -0.1627645 -2.9802322e-08 
 		-0.11758919 -0.14713301 -3.0035153e-08 -0.11758919 -0.14713304 -3.7252903e-09 -0.12732118 
 		-0.099244066 -6.0535967e-09 -0.12732118 -0.09924408 1.1641532e-10 -0.050982445 -0.10566819 
-		0 -0.052164406 -0.04826225 -3.7252903e-09 -0.057169676 -0.07537704 -4.1909516e-09 
-		-0.058679406 -0.1627645 -5.5879354e-08 -0.11758919 -0.14713296 -5.9138983e-08 -0.11758919 
-		-0.14713304 0 -0.043486778 -0.059860487 0 -0.045597415 -0.1444114 0 -0.093257606 
-		-0.11849758 0 -0.093257606 -0.11849758;
+		0 -0.052164406 -0.04826225 -3.7252903e-09 -0.057169676 0.01823955 -4.1909516e-09 
+		-0.058679406 -0.069147937 -5.5879354e-08 -0.068828985 -0.068560444 -5.9138983e-08 
+		-0.068828985 -0.068560518 0 -0.043486778 0.033756103 0 -0.045597415 -0.050794806 
+		0 -0.044497408 -0.039925061 0 -0.044497408 -0.039925061;
 createNode transform -n "pCylinder9";
 	rename -uid "463E8FDC-49C5-3AB2-5EBC-55B8A9DA0C4D";
-	setAttr ".t" -type "double3" -4.8520949331633894 0.045042103743517359 9.3180193581669357 ;
+	setAttr ".t" -type "double3" -4.8520949331633894 0.045042103743517359 6.9202218821311963 ;
 	setAttr ".r" -type "double3" 127.82124704954349 88.71586211358283 37.814276243224825 ;
 	setAttr ".s" -type "double3" 0.39690884033606522 0.19557638773830838 0.39690884033606522 ;
 createNode mesh -n "pCylinderShape9" -p "pCylinder9";
@@ -295,7 +300,7 @@ createNode mesh -n "pCylinderShape9" -p "pCylinder9";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pTorus1";
 	rename -uid "770FBD16-4C07-C2F1-27F8-648F385EC7C2";
-	setAttr ".t" -type "double3" -4.8404392504224933 0.013571098530595904 9.2826523600725093 ;
+	setAttr ".t" -type "double3" -4.8404392504224933 0.013571098530595904 6.8848548840367698 ;
 	setAttr ".r" -type "double3" 0 0 90.046164860575644 ;
 	setAttr ".s" -type "double3" 0.41906298829629568 0.50041543121638643 0.41906298829629568 ;
 createNode mesh -n "pTorusShape1" -p "pTorus1";
@@ -447,7 +452,7 @@ createNode mesh -n "pTorusShape1" -p "pTorus1";
 		0 -1.527369e-07 -3.1292439e-07 0 6.519258e-08 0 0 -5.8619776e-14;
 createNode transform -n "pTorus2";
 	rename -uid "2D678084-41EE-8EDF-18A8-28A8EEEF520B";
-	setAttr ".t" -type "double3" -3.7484273132589161 0.013571098530595904 9.2826523600725093 ;
+	setAttr ".t" -type "double3" -3.7484273132589161 0.013571098530595904 6.8848548840367698 ;
 	setAttr ".r" -type "double3" 0 0 90.046164860575644 ;
 	setAttr ".s" -type "double3" 0.41906298829629568 0.50041543121638643 0.41906298829629568 ;
 createNode mesh -n "pTorusShape2" -p "pTorus2";
@@ -1296,7 +1301,7 @@ createNode mesh -n "pTorusShape2" -p "pTorus2";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCylinder10";
 	rename -uid "521CD08D-402E-CDC1-50D0-34B5B27287DD";
-	setAttr ".t" -type "double3" -3.7600829959998121 0.045042103743517359 9.3180193581669357 ;
+	setAttr ".t" -type "double3" -3.7600829959998121 0.045042103743517359 6.9202218821311963 ;
 	setAttr ".r" -type "double3" 127.82124704954349 88.71586211358283 37.814276243224825 ;
 	setAttr ".s" -type "double3" 0.39690884033606522 0.19557638773830838 0.39690884033606522 ;
 createNode mesh -n "pCylinderShape10" -p "pCylinder10";
@@ -1477,7 +1482,7 @@ createNode mesh -n "pCylinderShape10" -p "pCylinder10";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pTorus3";
 	rename -uid "910A542A-48C9-C1CE-4570-C0B48FB60A59";
-	setAttr ".t" -type "double3" -0.95305050173023886 0.013571098530595904 9.2826523600725093 ;
+	setAttr ".t" -type "double3" -0.95305050173023886 0.013571098530595904 6.8848548840367698 ;
 	setAttr ".r" -type "double3" 0 0 90.046164860575644 ;
 	setAttr ".s" -type "double3" 0.41906298829629568 0.50041543121638643 0.41906298829629568 ;
 createNode mesh -n "pTorusShape3" -p "pTorus3";
@@ -2326,7 +2331,7 @@ createNode mesh -n "pTorusShape3" -p "pTorus3";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCylinder11";
 	rename -uid "FF8C7430-4102-321E-982E-C6B3E25EDFC4";
-	setAttr ".t" -type "double3" -0.96470618447113488 0.045042103743517359 9.3180193581669357 ;
+	setAttr ".t" -type "double3" -0.96470618447113488 0.045042103743517359 6.9202218821311963 ;
 	setAttr ".r" -type "double3" 127.82124704954349 88.71586211358283 37.814276243224825 ;
 	setAttr ".s" -type "double3" 0.39690884033606522 0.19557638773830838 0.39690884033606522 ;
 createNode mesh -n "pCylinderShape11" -p "pCylinder11";
@@ -2507,7 +2512,7 @@ createNode mesh -n "pCylinderShape11" -p "pCylinder11";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pTorus4";
 	rename -uid "8D798B42-433F-B6FB-1B65-559110A27E44";
-	setAttr ".t" -type "double3" -1.8503873192161029 0.013571098530595904 9.2826523600725093 ;
+	setAttr ".t" -type "double3" -1.8503873192161029 0.013571098530595904 6.8848548840367698 ;
 	setAttr ".r" -type "double3" 0 0 90.046164860575644 ;
 	setAttr ".s" -type "double3" 0.41906298829629568 0.50041543121638643 0.41906298829629568 ;
 createNode mesh -n "pTorusShape4" -p "pTorus4";
@@ -3356,7 +3361,7 @@ createNode mesh -n "pTorusShape4" -p "pTorus4";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCylinder12";
 	rename -uid "CEB5DD94-493C-D8C9-C736-BCBD36D24BBD";
-	setAttr ".t" -type "double3" -1.8620430019569989 0.045042103743517359 9.3180193581669357 ;
+	setAttr ".t" -type "double3" -1.8620430019569989 0.045042103743517359 6.9202218821311963 ;
 	setAttr ".r" -type "double3" 127.82124704954349 88.71586211358283 37.814276243224825 ;
 	setAttr ".s" -type "double3" 0.39690884033606522 0.19557638773830838 0.39690884033606522 ;
 createNode mesh -n "pCylinderShape12" -p "pCylinder12";
@@ -11777,7 +11782,7 @@ createNode mesh -n "pCylinderShape21" -p "pCylinder21";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pTorus14";
 	rename -uid "D17D1492-4F32-3C1F-0B62-D2A11D46A2B2";
-	setAttr ".t" -type "double3" -0.83270622695335295 -0.010617790937645033 7.8647404050460903 ;
+	setAttr ".t" -type "double3" -0.83270622695335295 -0.010617790937645033 5.4669429290103508 ;
 	setAttr ".r" -type "double3" 0 0 90.046164860575644 ;
 	setAttr ".s" -type "double3" 0.41906298829629568 0.50041543121638643 0.41906298829629568 ;
 createNode mesh -n "pTorusShape14" -p "pTorus14";
@@ -12626,7 +12631,7 @@ createNode mesh -n "pTorusShape14" -p "pTorus14";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCylinder22";
 	rename -uid "35CA7485-49A7-4F49-0029-70929DC05DB9";
-	setAttr ".t" -type "double3" -0.84436190969424896 0.020853214275276422 7.9001074031405167 ;
+	setAttr ".t" -type "double3" -0.84436190969424896 0.020853214275276422 5.5023099271047773 ;
 	setAttr ".r" -type "double3" 127.82124704954349 88.71586211358283 37.814276243224825 ;
 	setAttr ".s" -type "double3" 0.39690884033606522 0.19557638773830838 0.39690884033606522 ;
 createNode mesh -n "pCylinderShape22" -p "pCylinder22";
@@ -12807,7 +12812,7 @@ createNode mesh -n "pCylinderShape22" -p "pCylinder22";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pTorus15";
 	rename -uid "3839E418-45CF-972A-AD84-B5944C86D2A3";
-	setAttr ".t" -type "double3" -1.8465033273184073 -0.010617790937645033 7.8647404050460903 ;
+	setAttr ".t" -type "double3" -1.8465033273184073 -0.010617790937645033 5.4669429290103508 ;
 	setAttr ".r" -type "double3" 0 0 90.046164860575644 ;
 	setAttr ".s" -type "double3" 0.41906298829629568 0.50041543121638643 0.41906298829629568 ;
 createNode mesh -n "pTorusShape15" -p "pTorus15";
@@ -13656,7 +13661,7 @@ createNode mesh -n "pTorusShape15" -p "pTorus15";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCylinder23";
 	rename -uid "D1C8A4A4-4689-0A87-0CA7-79B24E61D0A8";
-	setAttr ".t" -type "double3" -1.8581590100593033 0.020853214275276422 7.9001074031405167 ;
+	setAttr ".t" -type "double3" -1.8581590100593033 0.020853214275276422 5.5023099271047773 ;
 	setAttr ".r" -type "double3" 127.82124704954349 88.71586211358283 37.814276243224825 ;
 	setAttr ".s" -type "double3" 0.39690884033606522 0.19557638773830838 0.39690884033606522 ;
 createNode mesh -n "pCylinderShape23" -p "pCylinder23";
@@ -13837,7 +13842,7 @@ createNode mesh -n "pCylinderShape23" -p "pCylinder23";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pTorus16";
 	rename -uid "FB1F6483-44BF-3DE1-4567-2C8F82FE8CD4";
-	setAttr ".t" -type "double3" -3.7583662588181452 -0.010617790937645033 7.8647404050460903 ;
+	setAttr ".t" -type "double3" -3.7583662588181452 -0.010617790937645033 5.4669429290103508 ;
 	setAttr ".r" -type "double3" 0 0 90.046164860575644 ;
 	setAttr ".s" -type "double3" 0.41906298829629568 0.50041543121638643 0.41906298829629568 ;
 createNode mesh -n "pTorusShape16" -p "pTorus16";
@@ -14686,7 +14691,7 @@ createNode mesh -n "pTorusShape16" -p "pTorus16";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCylinder24";
 	rename -uid "6047970A-4976-3D20-3ABF-52B9F96C0236";
-	setAttr ".t" -type "double3" -3.7700219415590412 0.020853214275276422 7.9001074031405167 ;
+	setAttr ".t" -type "double3" -3.7700219415590412 0.020853214275276422 5.5023099271047773 ;
 	setAttr ".r" -type "double3" 127.82124704954349 88.71586211358283 37.814276243224825 ;
 	setAttr ".s" -type "double3" 0.39690884033606522 0.19557638773830838 0.39690884033606522 ;
 createNode mesh -n "pCylinderShape24" -p "pCylinder24";
@@ -14867,7 +14872,7 @@ createNode mesh -n "pCylinderShape24" -p "pCylinder24";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pTorus17";
 	rename -uid "A9A97C61-4B86-1010-9F23-8A8812DB846A";
-	setAttr ".t" -type "double3" -4.8898899907627866 -0.010617790937645033 7.8647404050460903 ;
+	setAttr ".t" -type "double3" -4.8898899907627866 -0.010617790937645033 5.4669429290103508 ;
 	setAttr ".r" -type "double3" 0 0 90.046164860575644 ;
 	setAttr ".s" -type "double3" 0.41906298829629568 0.50041543121638643 0.41906298829629568 ;
 createNode mesh -n "pTorusShape17" -p "pTorus17";
@@ -15716,7 +15721,7 @@ createNode mesh -n "pTorusShape17" -p "pTorus17";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCylinder25";
 	rename -uid "AF3B4057-411A-6398-9489-409EB1D33657";
-	setAttr ".t" -type "double3" -4.9015456735036826 0.020853214275276422 7.9001074031405167 ;
+	setAttr ".t" -type "double3" -4.9015456735036826 0.020853214275276422 5.5023099271047773 ;
 	setAttr ".r" -type "double3" 127.82124704954349 88.71586211358283 37.814276243224825 ;
 	setAttr ".s" -type "double3" 0.39690884033606522 0.19557638773830838 0.39690884033606522 ;
 createNode mesh -n "pCylinderShape25" -p "pCylinder25";
@@ -17957,7 +17962,7 @@ createNode mesh -n "pCylinderShape27" -p "pCylinder27";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCube3";
 	rename -uid "F57F4EFF-44AE-4F1A-3004-EEB639CAFD64";
-	setAttr ".t" -type "double3" -2.8469794615031216 0.6966928156981318 -3.9637809835735149 ;
+	setAttr ".t" -type "double3" -2.9337801023613994 0.6966928156981318 -3.9637809835735149 ;
 	setAttr ".s" -type "double3" 4.0496064493432691 0.56474603526932687 0.84659319285697687 ;
 createNode mesh -n "pCubeShape3" -p "pCube3";
 	rename -uid "8027C501-422D-3FF6-C587-739AD5DAF1BE";
@@ -18110,26 +18115,11 @@ createNode mesh -n "pCubeShape9" -p "pCube9";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pCube10";
-	rename -uid "F694DA2D-4F64-910B-1210-5185AC6DCCA2";
-	setAttr ".t" -type "double3" -2.8416659361708305 0.29216952999550405 0 ;
-	setAttr ".r" -type "double3" -5.7117504665247578 0 0 ;
-	setAttr ".s" -type "double3" 3.8835431209043909 1.8795566960615682 0.15781629580134401 ;
-createNode mesh -n "pCubeShape10" -p "pCube10";
-	rename -uid "CA09495E-41C1-926A-B767-43BBC4177429";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "pCube11";
 	rename -uid "1267F457-4987-4371-5006-FBA598B9D128";
-	setAttr ".t" -type "double3" -2.8416659361708305 0.38373519909430653 10.444338140887114 ;
+	setAttr ".t" -type "double3" -2.8416659361708305 0.38373519909430653 8.0465406648513742 ;
 	setAttr ".r" -type "double3" -5.7117504665247578 0 0 ;
-	setAttr ".s" -type "double3" 3.8835431209043909 1.8795566960615682 0.15781629580134401 ;
+	setAttr ".s" -type "double3" 3.8835431209043909 1.8795566960615682 0.046735249755511701 ;
 createNode mesh -n "pCubeShape11" -p "pCube11";
 	rename -uid "9C9CCE6A-43A0-3916-F913-C0B78D5F7A23";
 	setAttr -k off ".v";
@@ -18164,20 +18154,98 @@ createNode mesh -n "pCubeShape11" -p "pCube11";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube12";
+	rename -uid "A44D25D2-4476-3C7E-A2BA-078A79A60E97";
+	setAttr ".t" -type "double3" -1.0369928536226263 0.11994690138360786 1.5834741879714782 ;
+	setAttr ".r" -type "double3" -119.95042847964923 -88.57808089426473 119.071568433533 ;
+	setAttr ".s" -type "double3" 5.4194340911358827 1.3220895203766292 0.046110105871335731 ;
+createNode mesh -n "pCubeShape12" -p "pCube12";
+	rename -uid "6ED27886-4400-A1EB-4460-0BBC34557DD1";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube13";
+	rename -uid "4721DD3F-4878-910C-98C5-AE979F56F94C";
+	setAttr ".t" -type "double3" -4.7642057983390105 0.11994690138360786 1.5834741879714782 ;
+	setAttr ".r" -type "double3" -119.95042847964923 -88.57808089426473 119.071568433533 ;
+	setAttr ".s" -type "double3" 5.4194340911358827 1.3220895203766292 0.046110105871335731 ;
+createNode mesh -n "pCubeShape13" -p "pCube13";
+	rename -uid "64221D1E-4319-360E-6080-5EB41B6EFC56";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "9197DA0F-44DA-9E13-66F2-7A92A2625303";
+	rename -uid "18AFBD72-4B6A-ECEF-971E-99967753BEEB";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "1402A58B-450B-8908-C250-AB98FFFABBF5";
+	rename -uid "DF5A6B78-4CB9-EC81-DB4D-43B9EE975151";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "64078715-4987-FECE-AAE2-EAABDA001F36";
+	rename -uid "4BCCA0DF-4B49-4127-5831-36A20FA0EA01";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "5A607F76-4F7C-68DD-86FB-7C86CF0BC78F";
+	rename -uid "61F5AFCF-4682-2F09-3832-67AD25A1B5E1";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "657A41E0-4491-4FDB-868B-E1ACC6B2395E";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "116C9C93-4E37-F9A2-41FE-96ACEC65CECD";
+	rename -uid "DBB811F1-4590-4213-564A-5197FFD82A85";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "8933FBFF-4B95-3E55-450E-82B9DB8685EC";
 	setAttr ".g" yes;
@@ -18364,7 +18432,7 @@ createNode polyExtrudeFace -n "polyExtrudeFace8";
 	setAttr ".ws" yes;
 	setAttr ".pvt" -type "float3" 4.1331663 0 -0.1618333 ;
 	setAttr ".rs" 42961;
-	setAttr ".lt" -type "double3" 0 4.622231866529366e-33 0.10358680756750702 ;
+	setAttr ".lt" -type "double3" 0 4.6222318665293654e-33 0.10358680756750702 ;
 	setAttr ".ls" -type "double3" 1 1 1.4738755708508979 ;
 	setAttr ".off" 0.15000000596046448;
 	setAttr ".c[0]"  0 1 1;
@@ -18391,9 +18459,6 @@ createNode polyTweak -n "polyTweak3";
 createNode polyCube -n "polyCube5";
 	rename -uid "7495E97E-4E59-1465-31DF-9A8E5C463DC8";
 	setAttr ".cuv" 4;
-createNode polyCube -n "polyCube6";
-	rename -uid "CF365D70-4802-C863-8B56-F0BF3AB6D1B9";
-	setAttr ".cuv" 4;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -18412,7 +18477,7 @@ select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
 select -ne :initialShadingGroup;
-	setAttr -s 45 ".dsm";
+	setAttr -s 46 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -18432,7 +18497,6 @@ connectAttr "deleteComponent3.og" "pTorusShape1.i";
 connectAttr "polyCube3.out" "pCubeShape3.i";
 connectAttr "polyExtrudeFace9.out" "pCubeShape4.i";
 connectAttr "polyCube5.out" "pCubeShape5.i";
-connectAttr "polyCube6.out" "pCubeShape10.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -18507,6 +18571,7 @@ connectAttr "pCubeShape4.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape5.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape8.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape9.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape10.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape11.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape12.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape13.iog" ":initialShadingGroup.dsm" -na;
 // End of SemiTruck.ma
