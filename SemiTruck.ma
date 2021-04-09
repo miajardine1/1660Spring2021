@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: SemiTruck.ma
-//Last modified: Wed, Apr 07, 2021 08:13:24 PM
+//Last modified: Thu, Apr 08, 2021 01:47:37 PM
 //Codeset: 1252
 requires maya "2020";
 currentUnit -l centimeter -a degree -t film;
@@ -9,12 +9,12 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
-fileInfo "UUID" "F1AE8876-4AC4-DB55-B9DF-0B91B0EC30B3";
+fileInfo "UUID" "E97451D6-4283-98FE-8378-EEB321E774AF";
 createNode transform -s -n "persp";
 	rename -uid "1CBE3741-478E-0F60-11F1-8990FA78506A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -29.369401805453013 -2.5719699289086106 14.964457656236174 ;
-	setAttr ".r" -type "double3" 364.46164726600716 656.99999999997283 0 ;
+	setAttr ".t" -type "double3" -31.840921245723109 5.0228971890186616 7.3510558917026172 ;
+	setAttr ".r" -type "double3" 351.26164726598972 642.99999999996055 3.534718575503034e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "0B95295A-4592-8852-E6CD-D28358374B84";
 	setAttr -k off ".v" no;
