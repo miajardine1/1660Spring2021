@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: SemiTruck.ma
-//Last modified: Wed, Apr 21, 2021 12:16:39 AM
+//Last modified: Thu, Apr 22, 2021 10:15:53 AM
 //Codeset: 1252
 requires maya "2020";
 currentUnit -l centimeter -a degree -t film;
@@ -9,7 +9,7 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
-fileInfo "UUID" "5E681CF5-4910-2512-6214-CAADC06F6F9C";
+fileInfo "UUID" "4B8E04B1-4E1C-D7F6-33AE-738BE2A28485";
 createNode transform -s -n "persp";
 	rename -uid "1CBE3741-478E-0F60-11F1-8990FA78506A";
 	setAttr ".v" no;
@@ -23039,19 +23039,19 @@ createNode mesh -n "polySurfaceShape32" -p "pCube35";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "D4956F96-4A2A-9383-DDBD-55B30A18BA11";
+	rename -uid "DD5368BE-4C33-EE65-4102-A8B3B412E730";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "728DBFC3-4575-0B95-A3EB-FCA4B9DA340A";
+	rename -uid "48C6F66B-4976-3ABE-C281-40943D221F6D";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "B2DD0D7B-4320-B7A3-4842-2889B19A4E17";
+	rename -uid "D1688523-4F21-4E24-5CDC-1FA41DA452C6";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "4A942C1E-4422-1A1B-7249-87848D149FAB";
+	rename -uid "B6F47C4C-4259-D978-E67D-DF9F11D38358";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "657A41E0-4491-4FDB-868B-E1ACC6B2395E";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "64317F04-49A7-4FE9-D0AB-608AAB6D7875";
+	rename -uid "C273714E-4FDD-DD01-B267-B9B526A48161";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "8933FBFF-4B95-3E55-450E-82B9DB8685EC";
 	setAttr ".g" yes;
